@@ -47,7 +47,7 @@ var Header = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { className: "filter" },
+        { id: "filter" },
         _react2.default.createElement(
           "h4",
           null,
@@ -64,7 +64,7 @@ var Header = function (_Component) {
         ),
         _react2.default.createElement(
           "select",
-          { name: "housetype", className: "filters neighborhood" },
+          { name: "housetype", className: "filters housetype" },
           _react2.default.createElement(
             "option",
             null,

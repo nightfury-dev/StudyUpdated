@@ -10,12 +10,12 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <section className="filter">
+      <section id="filter">
         <h4>Filter</h4>
         <select name="neighborhood" className="filters neighborhood">
           <option>Bridgeport</option>
         </select>
-        <select name="housetype" className="filters neighborhood">
+        <select name="housetype" className="filters housetype">
           <option>Apartment</option>
         </select>
         <select name="bedrooms" className="filters bedrooms">
