@@ -9,6 +9,13 @@ export default class Header extends Component {
     };
   }
   render() {
-    return <section className="filter">Filter</section>;
+    return (
+      <section className="filter">
+        <h4>Filter</h4>
+        <select name="neighborhood">
+          <option>Bridgeport</option>
+        </select>
+      </section>
+    );
   }
 }
