@@ -1,9 +1,11 @@
 #filter {
   background: $grey;
   width: 30%;
+  max-width: 300px;
 
   .inside {
     padding: 20px;
+    max-width: 300px;
   }
   h4 {
     font-size: 0.9rem;
@@ -49,4 +51,9 @@
       }
     }
   }
+}
+
+
+#listings{
+    
 }

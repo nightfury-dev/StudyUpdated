@@ -12,7 +12,7 @@ export default class Header extends Component {
     return (
       <section id="filter">
         <div class="inside">
-          <h4>Filter</h4>
+          <h4>FILTER</h4>
           <select name="neighborhood" className="filters neighborhood">
             <option>Bridgeport</option>
           </select>
