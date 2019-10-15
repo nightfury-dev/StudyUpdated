@@ -12,11 +12,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(67);
+var _react = __webpack_require__(59);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(68);
+var _reactDom = __webpack_require__(60);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -184,11 +184,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(67);
+var _react = __webpack_require__(59);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(68);
+var _reactDom = __webpack_require__(60);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -261,9 +261,160 @@ exports.default = Header;
 /***/ }),
 
 /***/ 232:
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: C:/Users/Desmend Jetton/Documents/GitHub/student-stay-over/assets/js/realEstate/Listings.js: Adjacent JSX elements must be wrapped in an enclosing tag (13:4)\n\n  11 |   render() {\n  12 |     return (<section className=\"Listings\">Listings</section>\n> 13 |     <section className=\"search-area\">\n     |     ^\n  14 |       <input type=\"text\" name=\"search\" />\n  15 |     </section>\n  16 |     <section className=\"sortby-area\">\n");
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(59);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(60);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Header = function (_Component) {
+  _inherits(Header, _Component);
+
+  function Header() {
+    _classCallCheck(this, Header);
+
+    var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
+
+    _this.state = {
+      name: "Joe"
+    };
+    return _this;
+  }
+
+  _createClass(Header, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "section",
+        { className: "Listings" },
+        _react2.default.createElement(
+          "section",
+          { className: "search-area" },
+          _react2.default.createElement("input", { type: "text", name: "search" })
+        ),
+        _react2.default.createElement(
+          "section",
+          { className: "sortby-area" },
+          _react2.default.createElement(
+            "div",
+            null,
+            "390 results found"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "sort-options" },
+            _react2.default.createElement(
+              "select",
+              { name: "sortby", className: "sortby" },
+              _react2.default.createElement(
+                "option",
+                { value: "price-asc" },
+                "Highest Price"
+              ),
+              _react2.default.createElement(
+                "option",
+                { value: "price-dsc" },
+                "Lowest Price"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "view" },
+              _react2.default.createElement("i", { className: "fas fa-list" }),
+              _react2.default.createElement("i", { className: "fas fa-th" })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { className: "listings-results" },
+          _react2.default.createElement(
+            "div",
+            { className: "listing" },
+            _react2.default.createElement(
+              "div",
+              { className: "listing-image" },
+              _react2.default.createElement(
+                "span",
+                { className: "Address" },
+                "Address"
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "details" },
+                _react2.default.createElement("div", { className: "user-image" }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "user-details" },
+                  _react2.default.createElement(
+                    "span",
+                    { className: "user-name" },
+                    "Nina Smith"
+                  ),
+                  _react2.default.createElement(
+                    "span",
+                    { className: "post-date" },
+                    "05/05/2019"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "listing-details" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "floor-space" },
+                    _react2.default.createElement("i", { "class": "far fa-square" }),
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "1000 ft\xB2"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "bedrooms" },
+                    _react2.default.createElement("i", { className: "fas fa-bed" }),
+                    _react2.default.createElement(
+                      "span",
+                      null,
+                      "3 bedrooms"
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement("section", { className: "pagination" })
+      );
+    }
+  }]);
+
+  return Header;
+}(_react.Component);
+
+exports.default = Header;
 
 /***/ }),
 
@@ -275,11 +426,11 @@ throw new Error("Module build failed: SyntaxError: C:/Users/Desmend Jetton/Docum
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(67);
+var _react = __webpack_require__(59);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(68);
+var _reactDom = __webpack_require__(60);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
