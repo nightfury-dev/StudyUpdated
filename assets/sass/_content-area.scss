@@ -1,9 +1,18 @@
+#content-area {
+  overflow: auto;
+  width: 100%;
+  background: black;
+  min-height: 100vh;
+}
+
 #filter {
   background: $grey;
   width: 30%;
   max-width: 300px;
   display: inline-block;
   float: left;
+  padding-left: 2px;
+  padding-right: 2p;
 
   .inside {
     padding: 20px;
@@ -19,7 +28,7 @@
     padding: 10px;
     font-size: 14px;
     font-weight: 500;
-    color: 1b1b1b;
+    color: #1b1b1b;
     display: block;
     margin-bottom: 25px;
     width: 100%;
@@ -107,5 +116,87 @@
         }
       }
     }
+  }
+  .listings-results {
+    margin-bottom: 60px;
+
+    .listing {
+      background: white;
+      width: 33.3%;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 9px 30px -4px rgba(176, 176, 176, 1);
+      -moz-box-shadow: 0px 9px 30px -4px rgba(176, 176, 176, 1);
+      box-shadow: 0px 9px 30px -4px rgba(176, 176, 176, 1);
+    }
+    .listing-image {
+      color: white;
+      padding: 15px;
+      position: relative;
+      background: url("https://www.seechicagorealestate.com/uploads/1641_n._claremont_546.jpg");
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      min-height: 200px;
+      -webkit-border-top-left-radius: 5px;
+      -webkit-border-top-right-radius: 5px;
+      -moz-border-radius-topleft: 5px;
+      -moz-border-radius-topright: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+
+      .details {
+        position: absolute;
+        top:0;
+        left: 0;
+        bottom: 0;
+        right:0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#5a1e9a+0,1c56b2+39,702ad8+50,1c56b2+68,a77ee8+100 */
+        background: rgba(90, 30, 154, 0.8); /* Old browsers */
+        background: -moz-linear-gradient(
+          -45deg,
+          rgba(90, 30, 154, 0.8) 0%,
+          rgba(28, 86, 178, 0.8) 39%,
+          rgba(112, 42, 216, 0.8) 50%,
+          rgba(28, 86, 178, 0.8) 68%,
+          rgba(167, 126, 232, 0.8) 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          -45deg,
+          rgba(90, 30, 154, 0.8) 0%,
+          rgba(28, 86, 178, 0.8) 39%,
+          rgba(112, 42, 216, 0.8) 50%,
+          rgba(28, 86, 178, 0.8) 68%,
+          rgba(167, 126, 232, 0.8) 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+          135deg,
+          rgba(90, 30, 154, 0.8) 0%,
+          rgba(28, 86, 178, 0.8) 39%,
+          rgba(112, 42, 216, 0.8) 50%,
+          rgba(28, 86, 178, 0.8) 68%,
+          rgba(167, 126, 232, 0.8) 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5a1e9a', endColorstr='#a77ee8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      }
+    }
+
+    // margin-bottom: 60px;
+    // background: green;
+
+    // .listing {
+    //   background: green;
+    //   width: 33.3%;
+    //   border-radius: 5px;
+    //   -webkit-box-shadow: 0px 9px 30px -4px rgba(176, 176, 176, 1);
+    //   -moz-box-shadow: 0px 9px 30px -4px rgba(176, 176, 176, 1);
+    //   box-shadow: 0px 9px 30px -4px rgba(176, 176, 176, 1);
+    // }
+    // .listing-image {
+    //   background: url("https://wwhttps://modernil.com/wp-content/uploads/2019/03/HD_1549478815665_Antonini_FrontElevation-300x201.jpgw.google.com/imgres?imgurl=https%3A%2F%2Fap.rdcpix.com%2F1513747434%2F3fa54d1a118934a4500242c4efc727acl-m0xd-w1020_h770_q80.jpg&imgrefurl=https%3A%2F%2Fwww.realtor.com%2Frealestateandhomes-detail%2F5521-W-Newport-Ave_Chicago_IL_60641_M75308-81268&docid=C9UfX1-tBaFPhM&tbnid=1tDSFghP1uHbaM%3A&vet=10ahUKEwjc_JfbkJ_lAhWhqHEKHRWwD9EQMwhIKAUwBQ..i&w=640&h=426&bih=562&biw=1264&q=modern%20house%20chicago%2C%20il&ved=0ahUKEwjc_JfbkJ_lAhWhqHEKHRWwD9EQMwhIKAUwBQ&iact=mrc&uact=8");
+    //   -webkit-background-size: cover;
+    //   -moz-background-size: cover;
+    //   -o-background-size: cover;
+    //   background-size: cover;
   }
 }

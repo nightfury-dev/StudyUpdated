@@ -41,13 +41,13 @@ export default class Header extends Component {
                 </div>
                 <div className="listing-details">
                   <div className="floor-space">
-                    <i class="far fa-square"></i>
-                    <span>1000 ft&sup2;</span>
+                    <i className="far fa-square"></i>
                   </div>
-                  <div className="bedrooms">
-                    <i className="fas fa-bed"></i>
-                    <span>3 bedrooms</span>
-                  </div>
+                  <span>1000 ft&sup2;</span>
+                </div>
+                <div className="bedrooms">
+                  <i className="fas fa-bed"></i>
+                  <span>3 bedrooms</span>
                 </div>
               </div>
             </div>
@@ -56,10 +56,10 @@ export default class Header extends Component {
               <span>
                 <i className="fas fa-map-marker-alt"></i>Bridgeport, Chicago, IL
               </span>
-              <span>$1000 / month </span>
             </div>
           </div>
         </section>
+
         <section className="pagination">
           <ul className="pagination-nums">
             <li>Prev</li>

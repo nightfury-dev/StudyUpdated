@@ -384,22 +384,22 @@ var Header = function (_Component) {
                   _react2.default.createElement(
                     "div",
                     { className: "floor-space" },
-                    _react2.default.createElement("i", { "class": "far fa-square" }),
-                    _react2.default.createElement(
-                      "span",
-                      null,
-                      "1000 ft\xB2"
-                    )
+                    _react2.default.createElement("i", { className: "far fa-square" })
                   ),
                   _react2.default.createElement(
-                    "div",
-                    { className: "bedrooms" },
-                    _react2.default.createElement("i", { className: "fas fa-bed" }),
-                    _react2.default.createElement(
-                      "span",
-                      null,
-                      "3 bedrooms"
-                    )
+                    "span",
+                    null,
+                    "1000 ft\xB2"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "bedrooms" },
+                  _react2.default.createElement("i", { className: "fas fa-bed" }),
+                  _react2.default.createElement(
+                    "span",
+                    null,
+                    "3 bedrooms"
                   )
                 )
               )
@@ -417,11 +417,6 @@ var Header = function (_Component) {
                 null,
                 _react2.default.createElement("i", { className: "fas fa-map-marker-alt" }),
                 "Bridgeport, Chicago, IL"
-              ),
-              _react2.default.createElement(
-                "span",
-                null,
-                "$1000 / month "
               )
             )
           )
