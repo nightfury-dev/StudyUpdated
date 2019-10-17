@@ -357,49 +357,62 @@ var Header = function (_Component) {
               { className: "listing-image" },
               _react2.default.createElement(
                 "span",
-                { className: "Address" },
-                "Address"
+                { className: "address" },
+                "11 w 22nd Street"
               ),
               _react2.default.createElement(
                 "div",
                 { className: "details" },
-                _react2.default.createElement("div", { className: "user-image" }),
                 _react2.default.createElement(
                   "div",
-                  { className: "user-details" },
-                  _react2.default.createElement(
-                    "span",
-                    { className: "user-name" },
-                    "Nina Smith"
-                  ),
-                  _react2.default.createElement(
-                    "span",
-                    { className: "post-date" },
-                    "05/05/2019"
-                  )
+                  { className: "col-md-3" },
+                  _react2.default.createElement("div", { className: "user-image" })
                 ),
                 _react2.default.createElement(
                   "div",
-                  { className: "listing-details" },
+                  { className: "col-md-9" },
                   _react2.default.createElement(
                     "div",
-                    { className: "floor-space" },
-                    _react2.default.createElement("i", { className: "far fa-square" }),
+                    { className: "user-details" },
                     _react2.default.createElement(
                       "span",
-                      null,
-                      "1000 ft\xB2"
+                      { className: "user-name" },
+                      "Nina Smith"
+                    ),
+                    _react2.default.createElement(
+                      "span",
+                      { className: "post-date" },
+                      "05/05/2019"
                     )
                   ),
                   _react2.default.createElement(
                     "div",
-                    { className: "bedrooms" },
-                    _react2.default.createElement("i", { className: "fas fa-bed" }),
+                    { className: "listing-details" },
                     _react2.default.createElement(
-                      "span",
-                      null,
-                      "3 bedrooms"
+                      "div",
+                      { className: "floor-space" },
+                      _react2.default.createElement("i", { className: "far fa-square" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        "1000 ft\xB2"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "bedrooms" },
+                      _react2.default.createElement("i", { className: "fas fa-bed" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        "3 bedrooms"
+                      )
                     )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "view-btn" },
+                    "View Listing"
                   )
                 )
               )
@@ -409,12 +422,12 @@ var Header = function (_Component) {
               { className: "bottom-info" },
               _react2.default.createElement(
                 "span",
-                null,
+                { className: "price" },
                 "$1000 / month "
               ),
               _react2.default.createElement(
                 "span",
-                null,
+                { className: "location" },
                 _react2.default.createElement("i", { className: "fas fa-map-marker-alt" }),
                 "Bridgeport, Chicago, IL"
               )
