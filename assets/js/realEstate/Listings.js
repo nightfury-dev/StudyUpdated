@@ -42,12 +42,12 @@ export default class Header extends Component {
                 <div className="listing-details">
                   <div className="floor-space">
                     <i className="far fa-square"></i>
+                    <span>1000 ft&sup2;</span>
                   </div>
-                  <span>1000 ft&sup2;</span>
-                </div>
-                <div className="bedrooms">
-                  <i className="fas fa-bed"></i>
-                  <span>3 bedrooms</span>
+                  <div className="bedrooms">
+                    <i className="fas fa-bed"></i>
+                    <span>3 bedrooms</span>
+                  </div>
                 </div>
               </div>
             </div>
