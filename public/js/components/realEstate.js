@@ -299,10 +299,115 @@ var Header = function (_Component) {
     _this.state = {
       name: "Joe"
     };
+    _this.loopListings = _this.loopListings.bind(_this);
     return _this;
   }
 
   _createClass(Header, [{
+    key: "loopListings",
+    value: function loopListings() {
+      var listingsData = this.props.listingsData;
+
+
+      return listingsData.map(function (listing, index) {
+        return _react2.default.createElement(
+          "div",
+          { className: "col-md-3", key: index },
+          _react2.default.createElement(
+            "div",
+            { className: "listing" },
+            _react2.default.createElement(
+              "div",
+              {
+                className: "listing-image",
+                style: {
+                  background: "url(\"" + listing.image + "\") no-repeat center center"
+                }
+              },
+              _react2.default.createElement(
+                "span",
+                { className: "address" },
+                listing.address
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "details" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-md-3" },
+                  _react2.default.createElement("div", { className: "user-image" })
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-md-9" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "user-details" },
+                    _react2.default.createElement(
+                      "span",
+                      { className: "user-name" },
+                      "Nina Smith"
+                    ),
+                    _react2.default.createElement(
+                      "span",
+                      { className: "post-date" },
+                      "05/05/2019"
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "listing-details" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "floor-space" },
+                      _react2.default.createElement("i", { className: "far fa-square" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        "1000 ft\xB2"
+                      )
+                    ),
+                    _react2.default.createElement(
+                      "div",
+                      { className: "bedrooms" },
+                      _react2.default.createElement("i", { className: "fas fa-bed" }),
+                      _react2.default.createElement(
+                        "span",
+                        null,
+                        listing.bedrooms
+                      )
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "view-btn" },
+                    "View Listing"
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "bottom-info" },
+              _react2.default.createElement(
+                "span",
+                { className: "price" },
+                listing.price
+              ),
+              _react2.default.createElement(
+                "span",
+                { className: "location" },
+                _react2.default.createElement("i", { className: "fas fa-map-marker-alt" }),
+                listing.city,
+                ", ",
+                listing.state
+              )
+            )
+          )
+        );
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -349,270 +454,7 @@ var Header = function (_Component) {
         _react2.default.createElement(
           "section",
           { className: "listings-results" },
-          _react2.default.createElement(
-            "div",
-            { className: "col-md-3" },
-            _react2.default.createElement(
-              "div",
-              { className: "listing" },
-              _react2.default.createElement(
-                "div",
-                { className: "listing-image" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "address" },
-                  "11 w 22nd Street"
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "details" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-3" },
-                    _react2.default.createElement("div", { className: "user-image" })
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-9" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "user-details" },
-                      _react2.default.createElement(
-                        "span",
-                        { className: "user-name" },
-                        "Nina Smith"
-                      ),
-                      _react2.default.createElement(
-                        "span",
-                        { className: "post-date" },
-                        "05/05/2019"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "listing-details" },
-                      _react2.default.createElement(
-                        "div",
-                        { className: "floor-space" },
-                        _react2.default.createElement("i", { className: "far fa-square" }),
-                        _react2.default.createElement(
-                          "span",
-                          null,
-                          "1000 ft\xB2"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "bedrooms" },
-                        _react2.default.createElement("i", { className: "fas fa-bed" }),
-                        _react2.default.createElement(
-                          "span",
-                          null,
-                          "3 bedrooms"
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "view-btn" },
-                      "View Listing"
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "bottom-info" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "price" },
-                  "$1000 / month "
-                ),
-                _react2.default.createElement(
-                  "span",
-                  { className: "location" },
-                  _react2.default.createElement("i", { className: "fas fa-map-marker-alt" }),
-                  "Bridgeport, Chicago, IL"
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-md-3" },
-            _react2.default.createElement(
-              "div",
-              { className: "listing" },
-              _react2.default.createElement(
-                "div",
-                { className: "listing-image" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "address" },
-                  "11 w 22nd Street"
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "details" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-3" },
-                    _react2.default.createElement("div", { className: "user-image" })
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-9" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "user-details" },
-                      _react2.default.createElement(
-                        "span",
-                        { className: "user-name" },
-                        "Nina Smith"
-                      ),
-                      _react2.default.createElement(
-                        "span",
-                        { className: "post-date" },
-                        "05/05/2019"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "listing-details" },
-                      _react2.default.createElement(
-                        "div",
-                        { className: "floor-space" },
-                        _react2.default.createElement("i", { className: "far fa-square" }),
-                        _react2.default.createElement(
-                          "span",
-                          null,
-                          "1000 ft\xB2"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "bedrooms" },
-                        _react2.default.createElement("i", { className: "fas fa-bed" }),
-                        _react2.default.createElement(
-                          "span",
-                          null,
-                          "3 bedrooms"
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "view-btn" },
-                      "View Listing"
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "bottom-info" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "price" },
-                  "$1000 / month "
-                ),
-                _react2.default.createElement(
-                  "span",
-                  { className: "location" },
-                  _react2.default.createElement("i", { className: "fas fa-map-marker-alt" }),
-                  "Bridgeport, Chicago, IL"
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "col-md-3" },
-            _react2.default.createElement(
-              "div",
-              { className: "listing" },
-              _react2.default.createElement(
-                "div",
-                { className: "listing-image" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "address" },
-                  "11 w 22nd Street"
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "details" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-3" },
-                    _react2.default.createElement("div", { className: "user-image" })
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "col-md-9" },
-                    _react2.default.createElement(
-                      "div",
-                      { className: "user-details" },
-                      _react2.default.createElement(
-                        "span",
-                        { className: "user-name" },
-                        "Nina Smith"
-                      ),
-                      _react2.default.createElement(
-                        "span",
-                        { className: "post-date" },
-                        "05/05/2019"
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "listing-details" },
-                      _react2.default.createElement(
-                        "div",
-                        { className: "floor-space" },
-                        _react2.default.createElement("i", { className: "far fa-square" }),
-                        _react2.default.createElement(
-                          "span",
-                          null,
-                          "1000 ft\xB2"
-                        )
-                      ),
-                      _react2.default.createElement(
-                        "div",
-                        { className: "bedrooms" },
-                        _react2.default.createElement("i", { className: "fas fa-bed" }),
-                        _react2.default.createElement(
-                          "span",
-                          null,
-                          "3 bedrooms"
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      "div",
-                      { className: "view-btn" },
-                      "View Listing"
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                "div",
-                { className: "bottom-info" },
-                _react2.default.createElement(
-                  "span",
-                  { className: "price" },
-                  "$1000 / month "
-                ),
-                _react2.default.createElement(
-                  "span",
-                  { className: "location" },
-                  _react2.default.createElement("i", { className: "fas fa-map-marker-alt" }),
-                  "Bridgeport, Chicago, IL"
-                )
-              )
-            )
-          )
+          this.loopListings()
         ),
         _react2.default.createElement(
           "section",
@@ -668,7 +510,132 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 236:
+/***/ 233:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var listingsData = [{
+  address: "20-34 Newart Court",
+  city: "Chicago",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "2034 Newart Court",
+  city: "Chicago",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "800 Dragon Court",
+  city: "Drury",
+  state: "Illinois",
+  rooms: "6",
+  price: 200000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
+}, {
+  address: "11 Juper Court",
+  city: "Evanston",
+  state: "Illinois",
+  rooms: "1",
+  price: 100000,
+  floorSpace: 5000,
+  extras: ["gym"],
+  homeType: "House",
+  image: "https://ap.rdcpix.com/390685504/28b138fea3ec51c8fe7a0924b425fd91l-m0xd-w640_h480_q80.jpg"
+}, {
+  address: "111 Syrup",
+  city: "North Chicago",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "333 Pancake Lane",
+  city: "Aurora",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "1029 OakLawn",
+  city: "Nortbrook",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "20-34 Newart Court",
+  city: "Chicago",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "16 Grover Street",
+  city: "Oak Lawn",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "20-34 Newart Court",
+  city: "Chicago",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "20-34 Newart Court",
+  city: "Chicago",
+  state: "Illinois",
+  rooms: "3",
+  price: 400000,
+  floorSpace: 2000,
+  extras: ["elevator", "gym"],
+  homeType: "Apartment",
+  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 237:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -696,6 +663,10 @@ var _Listings = __webpack_require__(232);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
+var _listingsData = __webpack_require__(233);
+
+var _listingsData2 = _interopRequireDefault(_listingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -713,7 +684,8 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      name: "Joe"
+      name: "Joe",
+      listingsData: _listingsData2.default
     };
     return _this;
   }
@@ -721,6 +693,7 @@ var App = function (_Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
+      console.log(this.state);
       return _react2.default.createElement(
         "div",
         null,
@@ -729,7 +702,7 @@ var App = function (_Component) {
           "section",
           { id: "content-area" },
           _react2.default.createElement(_Filter2.default, null),
-          _react2.default.createElement(_Listings2.default, null)
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
         )
       );
     }
@@ -744,4 +717,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), app);
 
 /***/ })
 
-},[236]);
+},[237]);
