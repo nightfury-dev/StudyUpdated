@@ -84,7 +84,7 @@ export default class Header extends Component {
             <label htmlFor="extras">
               <span>Elevators</span>
               <input
-                name="extras"
+                name="elevator"
                 value="elevator"
                 type="checkbox"
                 onChange={this.props.change}
@@ -103,7 +103,7 @@ export default class Header extends Component {
               <span>Finished Basement</span>
               <input
                 name="basement"
-                value="finished basement"
+                value="basement"
                 type="checkbox"
                 onChange={this.props.change}
               />
@@ -111,7 +111,7 @@ export default class Header extends Component {
             <label htmlFor="extras">
               <span>Gym</span>
               <input
-                name="extras"
+                name="gym"
                 value="gym"
                 type="checkbox"
                 onChange={this.props.change}

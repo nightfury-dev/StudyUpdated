@@ -178,7 +178,7 @@ var Header = function (_Component) {
               name: "max_floor_space",
               className: "max-price",
               onChange: this.props.change,
-              value: "50000"
+              value: this.props.globalState.max_floor_space
             })
           ),
           _react2.default.createElement(
@@ -198,7 +198,7 @@ var Header = function (_Component) {
                 "Elevators"
               ),
               _react2.default.createElement("input", {
-                name: "extras",
+                name: "elevator",
                 value: "elevator",
                 type: "checkbox",
                 onChange: this.props.change
@@ -229,7 +229,7 @@ var Header = function (_Component) {
               ),
               _react2.default.createElement("input", {
                 name: "basement",
-                value: "finished basement",
+                value: "basement",
                 type: "checkbox",
                 onChange: this.props.change
               })
@@ -243,7 +243,7 @@ var Header = function (_Component) {
                 "Gym"
               ),
               _react2.default.createElement("input", {
-                name: "extras",
+                name: "gym",
                 value: "gym",
                 type: "checkbox",
                 onChange: this.props.change
@@ -405,6 +405,10 @@ var Header = function (_Component) {
       var listingsData = this.props.listingsData;
 
 
+      if (listingsData == undefined || listingsData.length == 0) {
+        return "Sorry your filter did not match any listing";
+      }
+
       return listingsData.map(function (listing, index) {
         return _react2.default.createElement(
           "div",
@@ -460,7 +464,8 @@ var Header = function (_Component) {
                       _react2.default.createElement(
                         "span",
                         null,
-                        "1000 ft\xB2"
+                        listing.floorSpace,
+                        " sq.ft"
                       )
                     ),
                     _react2.default.createElement(
@@ -470,7 +475,7 @@ var Header = function (_Component) {
                       _react2.default.createElement(
                         "span",
                         null,
-                        listing.bedrooms
+                        listing.rooms
                       )
                     )
                   ),
@@ -641,7 +646,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "6",
   price: 200000,
-  floorSpace: 2000,
+  floorSpace: 1000000,
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
@@ -651,7 +656,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "1",
   price: 100000,
-  floorSpace: 5000,
+  floorSpace: 50,
   extras: ["gym"],
   homeType: "House",
   image: "https://ap.rdcpix.com/390685504/28b138fea3ec51c8fe7a0924b425fd91l-m0xd-w640_h480_q80.jpg"
@@ -671,7 +676,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "3",
   price: 400000,
-  floorSpace: 2000,
+  floorSpace: 4000,
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -681,7 +686,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "3",
   price: 400000,
-  floorSpace: 2000,
+  floorSpace: 6000,
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -691,7 +696,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "3",
   price: 400000,
-  floorSpace: 2000,
+  floorSpace: 9000,
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -701,7 +706,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "3",
   price: 400000,
-  floorSpace: 2000,
+  floorSpace: 10000000,
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -787,10 +792,16 @@ var App = function (_Component) {
       min_price: 0,
       max_price: 1000000,
       min_floor_space: 0,
-      max_floor_space: 50000
+      max_floor_space: 50000,
+      elevator: false,
+      basement: false,
+      gym: false,
+      swimming_pool: false,
+      filteredData: _listingsData2.default
     };
 
     _this.change = _this.change.bind(_this);
+    _this.filteredData = _this.filteredData.bind(_this);
     return _this;
   }
 
@@ -803,8 +814,22 @@ var App = function (_Component) {
       var value = event.target.type === "checkbox" ? event.target.checked : event.target.value;
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
+        _this2.filteredData();
       });
       console.log(event.target.value);
+    }
+  }, {
+    key: "filteredData",
+    value: function filteredData() {
+      var _this3 = this;
+
+      var newData = this.state.listingsData.filter(function (item) {
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space;
+      });
+
+      this.setState({
+        filteredData: newData
+      });
     }
   }, {
     key: "render",
@@ -817,7 +842,7 @@ var App = function (_Component) {
           "section",
           { id: "content-area" },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filteredData })
         )
       );
     }
