@@ -6,6 +6,7 @@ var listingsData = [
     rooms: "3",
     price: 400000,
     floorSpace: 2000,
+    neighborhood: "bronzeville",
     extras: ["elevator", "gym"],
     homeType: "Apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -17,6 +18,7 @@ var listingsData = [
     rooms: "3",
     price: 400000,
     floorSpace: 2000,
+    neighborhood: "bridgeport",
     extras: ["elevator", "gym"],
     homeType: "Apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -28,6 +30,7 @@ var listingsData = [
     rooms: "6",
     price: 200000,
     floorSpace: 1000000,
+    neighborhood: "bronzeville",
     extras: ["elevator", "gym"],
     homeType: "Apartment",
     image:
@@ -39,6 +42,7 @@ var listingsData = [
     state: "Illinois",
     rooms: "1",
     price: 100000,
+    neighborhood: "chinatown",
     floorSpace: 50,
     extras: ["gym"],
     homeType: "House",

@@ -65,6 +65,11 @@ var Header = function (_Component) {
             },
             _react2.default.createElement(
               "option",
+              { value: "All" },
+              "All"
+            ),
+            _react2.default.createElement(
+              "option",
               { value: "bridgeport" },
               "Bridgeport"
             ),
@@ -82,10 +87,15 @@ var Header = function (_Component) {
           _react2.default.createElement(
             "select",
             {
-              name: "housetype",
-              className: "filters housetype",
+              name: "homeType",
+              className: "filters homeType",
               onChange: this.props.change
             },
+            _react2.default.createElement(
+              "option",
+              { value: "All" },
+              "All homes"
+            ),
             _react2.default.createElement(
               "option",
               { value: "apartment" },
@@ -116,18 +126,23 @@ var Header = function (_Component) {
             },
             _react2.default.createElement(
               "option",
-              { value: "2" },
-              "2 BR"
+              { value: "0" },
+              "0+ BR"
             ),
             _react2.default.createElement(
               "option",
               { value: "1" },
-              "1 BR"
+              "1+ BR"
+            ),
+            _react2.default.createElement(
+              "option",
+              { value: "2" },
+              "2+ BR"
             ),
             _react2.default.createElement(
               "option",
               { value: "3" },
-              "3 BR"
+              "3+ BR"
             ),
             _react2.default.createElement(
               "option",
@@ -627,6 +642,7 @@ var listingsData = [{
   rooms: "3",
   price: 400000,
   floorSpace: 2000,
+  neighborhood: "bronzeville",
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -637,6 +653,7 @@ var listingsData = [{
   rooms: "3",
   price: 400000,
   floorSpace: 2000,
+  neighborhood: "bridgeport",
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -647,6 +664,7 @@ var listingsData = [{
   rooms: "6",
   price: 200000,
   floorSpace: 1000000,
+  neighborhood: "bronzeville",
   extras: ["elevator", "gym"],
   homeType: "Apartment",
   image: "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
@@ -656,6 +674,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "1",
   price: 100000,
+  neighborhood: "chinatown",
   floorSpace: 50,
   extras: ["gym"],
   homeType: "House",
@@ -789,9 +808,9 @@ var App = function (_Component) {
     _this.state = {
       name: "Joe",
       listingsData: _listingsData2.default,
-      neighborhood: "Bridgeport",
-      hometype: "studio",
-      bedrooms: 1,
+      neighborhood: "All",
+      homeType: "All",
+      bedrooms: 0,
       min_price: 0,
       max_price: 1000000,
       min_floor_space: 0,
@@ -829,7 +848,17 @@ var App = function (_Component) {
       var newData = this.state.listingsData.filter(function (item) {
         return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space;
       });
+      if (this.state.neighborhood != "All") {
+        newData = newData.filter(function (item) {
+          return item.neighborhood == _this3.state.neighborhood;
+        });
+      }
 
+      if (this.state.homeType != "All") {
+        newData = newData.filter(function (item) {
+          return item.homeType == _this3.state.neighborhood;
+        });
+      }
       this.setState({
         filteredData: newData
       });

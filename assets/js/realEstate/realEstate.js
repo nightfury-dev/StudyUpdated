@@ -11,9 +11,9 @@ class App extends Component {
     this.state = {
       name: "Joe",
       listingsData,
-      neighborhood: "Bridgeport",
-      homeType: "studio",
-      bedrooms: 1,
+      neighborhood: "All",
+      homeType: "All",
+      bedrooms: 0,
       min_price: 0,
       max_price: 1000000,
       min_floor_space: 0,
@@ -56,6 +56,17 @@ class App extends Component {
         item.floorSpace <= this.state.max_floor_space
       );
     });
+    if (this.state.neighborhood != "All") {
+      newData = newData.filter(item => {
+        return item.neighborhood == this.state.neighborhood;
+      });
+    }
+
+    if (this.state.homeType != "All") {
+      newData = newData.filter(item => {
+        return item.homeType == this.state.homeType;
+      });
+    }
 
     this.setState({
       filteredData: newData
