@@ -11,6 +11,9 @@ class App extends Component {
     this.state = {
       name: "Joe",
       listingsData,
+      neighborhood: "Bridgeport",
+      homeType: "studio",
+      bedrooms: 1,
       min_price: 0,
       max_price: 1000000,
       min_floor_space: 0,

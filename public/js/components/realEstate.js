@@ -789,6 +789,9 @@ var App = function (_Component) {
     _this.state = {
       name: "Joe",
       listingsData: _listingsData2.default,
+      neighborhood: "Bridgeport",
+      hometype: "studio",
+      bedrooms: 1,
       min_price: 0,
       max_price: 1000000,
       min_floor_space: 0,
