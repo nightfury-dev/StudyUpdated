@@ -13,6 +13,7 @@ export default class Header extends Component {
       <section id="filter">
         <div className="inside">
           <h4>FILTER</h4>
+          <label htmlFor="neighborhood">Neighborhood</label>
           <select
             name="neighborhood"
             className="filters neighborhood"
@@ -23,18 +24,20 @@ export default class Header extends Component {
             <option value="bronzeville">Bronzeville</option>
             <option value="chinatown">Chinatown</option>
           </select>
+          <label htmlFor="homeTypes">Home Type</label>
+
           <select
             name="homeType"
             className="filters homeType"
             onChange={this.props.change}
           >
             <option value="All">All homes</option>
-
             <option value="apartment">Apartment</option>
             <option value="condo">Condo</option>
             <option value="room">Room</option>
             <option value="house">House</option>
           </select>
+          <label htmlFor="bedrooms">Bedrooms</label>
           <select
             name="bedrooms"
             className="filters bedrooms"
@@ -45,7 +48,10 @@ export default class Header extends Component {
             <option value="1">1+ BR</option>
             <option value="2">2+ BR</option>
             <option value="3">3+ BR</option>
-            <option value="4">4 BR</option>
+            <option value="4">4+ BR</option>
+            <option value="5">5+ BR</option>
+            <option value="6">6+ BR</option>
+            <option value="7">7+ BR</option>
           </select>
 
           <div className="filters price">

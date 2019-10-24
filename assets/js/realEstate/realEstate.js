@@ -27,6 +27,7 @@ class App extends Component {
 
     this.change = this.change.bind(this);
     this.filteredData = this.filteredData.bind(this);
+    this.populateForms = this.populateForms.bind(this);
   }
 
   change(event) {
@@ -53,7 +54,8 @@ class App extends Component {
         item.price >= this.state.min_price &&
         item.price <= this.state.max_price &&
         item.floorSpace >= this.state.min_floor_space &&
-        item.floorSpace <= this.state.max_floor_space
+        item.floorSpace <= this.state.max_floor_space &&
+        item.rooms >= this.state.bedrooms
       );
     });
     if (this.state.neighborhood != "All") {
@@ -63,14 +65,33 @@ class App extends Component {
     }
 
     if (this.state.homeType != "All") {
-      newData = newData.filter(item => {
+      newData = newData.filter((item => {
         return item.homeType == this.state.homeType;
-      });
+      })
     }
 
+ 
+
+
+// for getting filtered data view
     this.setState({
       filteredData: newData
-    });
+    })
+  }
+  // method for this.populateForms
+  //3:28
+  populateForms() {
+    //neigborhood
+    var neighborhoods = this.state.listingsData.map((item) => {
+      return item.neighborhood
+    }
+
+    //hometype
+
+
+    //bedrooms
+}
+  
   }
   render() {
     return (

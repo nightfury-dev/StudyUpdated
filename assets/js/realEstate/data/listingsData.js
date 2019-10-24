@@ -8,19 +8,19 @@ var listingsData = [
     floorSpace: 2000,
     neighborhood: "bronzeville",
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "condo",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
     address: "2034 Newart Court",
     city: "Chicago",
     state: "Illinois",
-    rooms: "3",
+    rooms: "4",
     price: 400000,
     floorSpace: 2000,
     neighborhood: "bridgeport",
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "condo",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
@@ -32,7 +32,7 @@ var listingsData = [
     floorSpace: 1000000,
     neighborhood: "bronzeville",
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "studio",
     image:
       "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
   },
@@ -57,51 +57,51 @@ var listingsData = [
     price: 400000,
     floorSpace: 2000,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "studio",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
     address: "333 Pancake Lane",
     city: "Aurora",
     state: "Illinois",
-    rooms: "3",
+    rooms: "2",
     price: 400000,
     floorSpace: 4000,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
     address: "1029 OakLawn",
     city: "Nortbrook",
     state: "Illinois",
-    rooms: "3",
+    rooms: "6",
     price: 400000,
     floorSpace: 6000,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
     address: "20-34 Newart Court",
     city: "Chicago",
     state: "Illinois",
-    rooms: "3",
+    rooms: "5",
     price: 400000,
     floorSpace: 9000,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
     address: "16 Grover Street",
     city: "Oak Lawn",
     state: "Illinois",
-    rooms: "3",
+    rooms: "4",
     price: 400000,
     floorSpace: 10000000,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
@@ -112,7 +112,7 @@ var listingsData = [
     price: 400000,
     floorSpace: 2000,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
   {
@@ -123,7 +123,7 @@ var listingsData = [
     price: 400000,
     floorSpace: 2000,
     extras: ["elevator", "gym"],
-    homeType: "Apartment",
+    homeType: "house",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   }
 ];
