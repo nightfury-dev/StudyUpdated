@@ -24,12 +24,15 @@ class App extends Component {
       swimming_pool: false,
       filteredData: listingsData,
       populateFormsData: "",
-      sortby: "price-dsc"
+      sortby: "price-dsc",
+      view: "box",
+      search: ""
     };
 
     this.change = this.change.bind(this);
     this.filteredData = this.filteredData.bind(this);
     this.populateForms = this.populateForms.bind(this);
+    this.changeView = this.changeView.bind(this);
   }
 
   componentWillMount() {
@@ -47,6 +50,7 @@ class App extends Component {
       event.target.type === "checkbox"
         ? event.target.checked
         : event.target.value;
+
     this.setState(
       {
         [name]: value
@@ -56,6 +60,11 @@ class App extends Component {
         this.filteredData();
       }
     );
+  }
+  changeView(viewName) {
+    this.setState({
+      view: viewName
+    });
   }
 
   filteredData() {
@@ -68,6 +77,7 @@ class App extends Component {
         item.rooms >= this.state.bedrooms
       );
     });
+
     if (this.state.city != "All") {
       newData = newData.filter(item => {
         return item.city == this.state.city;
@@ -80,6 +90,29 @@ class App extends Component {
       });
     }
 
+    if (this.state.sortby == "price-dsc") {
+      newData = newData.sort((a, b) => {
+        return a.price - b.price;
+      });
+    }
+
+    if (this.state.sortby == "price-asc") {
+      newData = newData.sort((a, b) => {
+        return b.price - a.price;
+      });
+    }
+
+    if (this.state.search != "") {
+      newData = newData.filter(item => {
+        var city = item.city.toLowerCase();
+        var searchText = this.state.search.toLowerCase();
+        var n = city.match(searchText);
+
+        if (n != null) {
+          return true;
+        }
+      });
+    }
     // for getting filtered data view
     this.setState({
       filteredData: newData
@@ -117,9 +150,9 @@ class App extends Component {
     this.setState(
       {
         populateFormsData: {
-          cities,
           homeTypes,
-          bedrooms
+          bedrooms,
+          cities
         }
       },
       () => {
@@ -141,6 +174,8 @@ class App extends Component {
           <Listings
             listingsData={this.state.filteredData}
             change={this.change}
+            globalState={this.state}
+            changeView={this.changeView}
           />
         </section>
       </div>
