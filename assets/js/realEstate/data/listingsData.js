@@ -45,7 +45,7 @@ var listingsData = [
     neighborhood: "chinatown",
     floorSpace: 50,
     extras: ["gym"],
-    homeType: "House",
+    homeType: "house",
     image:
       "https://ap.rdcpix.com/390685504/28b138fea3ec51c8fe7a0924b425fd91l-m0xd-w640_h480_q80.jpg"
   },
