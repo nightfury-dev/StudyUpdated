@@ -145,7 +145,9 @@ export default class Header extends Component {
           </div>
         </section>
 
-        <section className="listings-results">{this.loopListings()}</section>
+        <section className="listings-results">
+          <div className="row">{this.loopListings()}</div>
+        </section>
 
         <section id="pagination">
           <div className="row">
