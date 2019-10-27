@@ -22,6 +22,8 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -232,7 +234,11 @@ var Header = function (_Component) {
                 type: "checkbox",
                 onChange: this.props.change
               })
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "filters extras" },
             _react2.default.createElement(
               "label",
               { htmlFor: "extras" },
@@ -247,7 +253,11 @@ var Header = function (_Component) {
                 type: "checkbox",
                 onChange: this.props.change
               })
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "filters extras" },
             _react2.default.createElement(
               "label",
               { htmlFor: "extras" },
@@ -262,21 +272,25 @@ var Header = function (_Component) {
                 type: "checkbox",
                 onChange: this.props.change
               })
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "filters extras" },
             _react2.default.createElement(
               "label",
-              { htmlFor: "extras" },
+              { htmlFor: "filters extras" },
               _react2.default.createElement(
                 "span",
                 null,
                 "Gym"
               ),
-              _react2.default.createElement("input", {
+              _react2.default.createElement("input", _defineProperty({
                 name: "gym",
                 value: "gym",
                 type: "checkbox",
                 onChange: this.props.change
-              })
+              }, "value", this.props.globalState.gym))
             )
           )
         )
@@ -436,7 +450,7 @@ var Header = function (_Component) {
       var listingsData = this.props.listingsData;
 
 
-      if (listingsData == undefined || listingsData.length == 0) {
+      if (listingsData == undefined || listingsData.length === 0) {
         return "Sorry your filter did not match any listing";
       }
 
@@ -778,7 +792,7 @@ var listingsData = [{
   price: 400000,
   floorSpace: 2000,
   neighborhood: "bronzeville",
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "condo",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
@@ -789,7 +803,7 @@ var listingsData = [{
   price: 400000,
   floorSpace: 2000,
   neighborhood: "bridgeport",
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "condo",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
@@ -800,7 +814,7 @@ var listingsData = [{
   price: 200000,
   floorSpace: 1000000,
   neighborhood: "bronzeville",
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "studio",
   image: "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
 }, {
@@ -811,7 +825,7 @@ var listingsData = [{
   price: 100000,
   neighborhood: "chinatown",
   floorSpace: 50,
-  extras: ["gym"],
+  extras: ["elevator"],
   homeType: "house",
   image: "https://ap.rdcpix.com/390685504/28b138fea3ec51c8fe7a0924b425fd91l-m0xd-w640_h480_q80.jpg"
 }, {
@@ -831,7 +845,7 @@ var listingsData = [{
   rooms: "1",
   price: 400000,
   floorSpace: 4000,
-  extras: ["elevator", "gym"],
+  extras: ["gym"],
   homeType: "apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
@@ -841,7 +855,7 @@ var listingsData = [{
   rooms: "6",
   price: 400000,
   floorSpace: 6000,
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
@@ -851,7 +865,7 @@ var listingsData = [{
   rooms: "5",
   price: 400000,
   floorSpace: 9000,
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
@@ -861,7 +875,7 @@ var listingsData = [{
   rooms: "4",
   price: 400000,
   floorSpace: 10000000,
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
@@ -871,7 +885,7 @@ var listingsData = [{
   rooms: "3",
   price: 400000,
   floorSpace: 2000,
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
@@ -881,7 +895,7 @@ var listingsData = [{
   rooms: "3",
   price: 400000,
   floorSpace: 2000,
-  extras: ["elevator", "gym"],
+  extras: ["elevator"],
   homeType: "house",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }];
@@ -943,19 +957,18 @@ var App = function (_Component) {
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
     _this.state = {
-      name: "Joe",
       listingsData: _listingsData2.default,
-      neighborhood: "All",
+      city: "All",
       homeType: "All",
       bedrooms: 0,
       min_price: 0,
       max_price: 1000000,
       min_floor_space: 0,
       max_floor_space: 50000,
-      elevator: false,
-      basement: false,
-      gym: false,
-      swimming_pool: false,
+      elevator: "",
+      basement: "",
+      gym: "",
+      swimming_pool: "",
       filteredData: _listingsData2.default,
       populateFormsData: "",
       sortby: "price-dsc",
@@ -1020,6 +1033,13 @@ var App = function (_Component) {
       if (this.state.homeType != "All") {
         newData = newData.filter(function (item) {
           return item.homeType == _this3.state.homeType;
+        });
+      }
+
+      //for filtered extras of house
+      if (this.state.gym == true) {
+        newData = newData.filter(function (item) {
+          return item.extras.includes("gym") == true;
         });
       }
 

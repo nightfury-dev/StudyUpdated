@@ -141,6 +141,8 @@ export default class Header extends Component {
                 onChange={this.props.change}
               />
             </label>
+          </div>
+          <div className="filters extras">
             <label htmlFor="extras">
               <span>Swimming Pool</span>
               <input
@@ -150,6 +152,8 @@ export default class Header extends Component {
                 onChange={this.props.change}
               />
             </label>
+          </div>
+          <div className="filters extras">
             <label htmlFor="extras">
               <span>Finished Basement</span>
               <input
@@ -159,13 +163,16 @@ export default class Header extends Component {
                 onChange={this.props.change}
               />
             </label>
-            <label htmlFor="extras">
+          </div>
+          <div className="filters extras">
+            <label htmlFor="filters extras">
               <span>Gym</span>
               <input
                 name="gym"
                 value="gym"
                 type="checkbox"
                 onChange={this.props.change}
+                value={this.props.globalState.gym}
               />
             </label>
           </div>

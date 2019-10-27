@@ -7,7 +7,7 @@ var listingsData = [
     price: 400000,
     floorSpace: 2000,
     neighborhood: "bronzeville",
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "condo",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
@@ -19,7 +19,7 @@ var listingsData = [
     price: 400000,
     floorSpace: 2000,
     neighborhood: "bridgeport",
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "condo",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
@@ -31,7 +31,7 @@ var listingsData = [
     price: 200000,
     floorSpace: 1000000,
     neighborhood: "bronzeville",
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "studio",
     image:
       "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
@@ -44,7 +44,7 @@ var listingsData = [
     price: 100000,
     neighborhood: "chinatown",
     floorSpace: 50,
-    extras: ["gym"],
+    extras: ["elevator"],
     homeType: "house",
     image:
       "https://ap.rdcpix.com/390685504/28b138fea3ec51c8fe7a0924b425fd91l-m0xd-w640_h480_q80.jpg"
@@ -67,7 +67,7 @@ var listingsData = [
     rooms: "1",
     price: 400000,
     floorSpace: 4000,
-    extras: ["elevator", "gym"],
+    extras: ["gym"],
     homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
@@ -78,7 +78,7 @@ var listingsData = [
     rooms: "6",
     price: 400000,
     floorSpace: 6000,
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
@@ -89,7 +89,7 @@ var listingsData = [
     rooms: "5",
     price: 400000,
     floorSpace: 9000,
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
@@ -100,7 +100,7 @@ var listingsData = [
     rooms: "4",
     price: 400000,
     floorSpace: 10000000,
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
@@ -111,7 +111,7 @@ var listingsData = [
     rooms: "3",
     price: 400000,
     floorSpace: 2000,
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "apartment",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   },
@@ -122,7 +122,7 @@ var listingsData = [
     rooms: "3",
     price: 400000,
     floorSpace: 2000,
-    extras: ["elevator", "gym"],
+    extras: ["elevator"],
     homeType: "house",
     image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
   }

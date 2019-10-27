@@ -12,7 +12,7 @@ export default class Header extends Component {
   loopListings() {
     var { listingsData } = this.props;
 
-    if (listingsData == undefined || listingsData.length == 0) {
+    if (listingsData == undefined || listingsData.length === 0) {
       return "Sorry your filter did not match any listing";
     }
 

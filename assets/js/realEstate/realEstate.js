@@ -9,19 +9,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Joe",
       listingsData,
-      neighborhood: "All",
+      city: "All",
       homeType: "All",
       bedrooms: 0,
       min_price: 0,
       max_price: 1000000,
       min_floor_space: 0,
       max_floor_space: 50000,
-      elevator: false,
-      basement: false,
-      gym: false,
-      swimming_pool: false,
+      elevator: "",
+      basement: "",
+      gym: "",
+      swimming_pool: "",
       filteredData: listingsData,
       populateFormsData: "",
       sortby: "price-dsc",
@@ -88,6 +87,13 @@ class App extends Component {
     if (this.state.homeType != "All") {
       newData = newData.filter(item => {
         return item.homeType == this.state.homeType;
+      });
+    }
+
+    //for filtered extras of house
+    if (this.state.gym == true) {
+      newData = newData.filter(item => {
+        return item.extras.includes("gym") == true;
       });
     }
 
