@@ -977,6 +977,7 @@ var App = function (_Component) {
       var listingsData = this.state.listingsData.sort(function (a, b) {
         return a.price - b.price;
       });
+
       this.setState({
         listingsData: listingsData
       });

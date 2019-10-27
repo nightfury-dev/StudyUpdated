@@ -40,6 +40,7 @@ class App extends Component {
     var listingsData = this.state.listingsData.sort((a, b) => {
       return a.price - b.price;
     });
+
     this.setState({
       listingsData
     });
