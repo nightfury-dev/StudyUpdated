@@ -1,17 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
+
 header {
-  background: #0c002b;
+  background: #035959;
   color: white;
   overflow: auto;
   padding: 20px 15px;
 
-  .logo {
-    float: left;
+  .fa {
+    color: red;
+    font-size: 5rem;
+    // margin-right: 15px;
   }
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    float: left;
+    font-family: "Satisfy", cursive;
+  }
+
   nav {
     float: right;
     a {
       text-decoration: none;
-      color: white;
+      color: #f2f2f2;
       padding: 10px 20px;
       text-transform: capitalize;
       font-weight: 300;

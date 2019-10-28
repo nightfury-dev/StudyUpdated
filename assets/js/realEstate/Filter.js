@@ -10,6 +10,7 @@ export default class Header extends Component {
     this.cities = this.cities.bind(this);
     this.homeTypes = this.homeTypes.bind(this);
     this.bedrooms = this.bedrooms.bind(this);
+    this.campus = this.campus.bind(this);
   }
   componentWillMount() {
     this.props.populateAction();
@@ -52,6 +53,20 @@ export default class Header extends Component {
       });
     }
   }
+
+  campus() {
+    if (this.props.globalState.populateFormsData.campus != undefined) {
+      var { campus } = this.props.globalState.populateFormsData;
+
+      return campus.map(item => {
+        return (
+          <option key={item} value={item}>
+            {item}
+          </option>
+        );
+      });
+    }
+  }
   render() {
     return (
       <section id="filter">
@@ -82,9 +97,10 @@ export default class Header extends Component {
             className="filters homeType"
             onChange={this.props.change}
           >
-            <option value="All">All homes</option>
+            <option value="All">All Homes</option>
             {this.homeTypes()}
           </select>
+
           <label htmlFor="bedrooms">Bedrooms</label>
           <select
             name="bedrooms"
@@ -92,6 +108,16 @@ export default class Header extends Component {
             onChange={this.props.change}
           >
             {this.bedrooms()}
+          </select>
+
+          <label htmlFor="campus">Campus</label>
+          <select
+            name="campus"
+            className="filters campus"
+            onChange={this.props.change}
+          >
+            <option value="All">All Campuses</option>
+            {this.campus()}
           </select>
 
           <div className="filters price">
@@ -139,6 +165,7 @@ export default class Header extends Component {
                 value="elevator"
                 type="checkbox"
                 onChange={this.props.change}
+                value={this.props.globalState.elevator}
               />
             </label>
           </div>
@@ -150,6 +177,7 @@ export default class Header extends Component {
                 value="swimmingpool"
                 type="checkbox"
                 onChange={this.props.change}
+                value={this.props.globalState.swimmingpool}
               />
             </label>
           </div>
@@ -161,6 +189,7 @@ export default class Header extends Component {
                 value="basement"
                 type="checkbox"
                 onChange={this.props.change}
+                value={this.props.globalState.basement}
               />
             </label>
           </div>
@@ -185,4 +214,4 @@ export default class Header extends Component {
 // // Features to Add:
 // // 1. College
 // // 2. Major
-// 3. Work Hard - Play
+// 3. Vibe: Book Worm-- Turn Up--Night Owl -- Social Butterfly -- Lowkey --Homebody -- Saint

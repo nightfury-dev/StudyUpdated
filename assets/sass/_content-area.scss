@@ -5,6 +5,8 @@
 }
 
 #filter {
+  border-color: #598c0b;
+  font-family: "Staatliches", cursive;
   padding-top: 8px;
   background: $grey;
   width: 30%;
@@ -13,6 +15,8 @@
   float: left;
   padding-left: 5px;
   padding-right: 2p;
+  border-radius: 3%;
+  border: 10px;
 
   .inside {
     padding: 20px;

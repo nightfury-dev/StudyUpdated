@@ -11,7 +11,10 @@ export default class Header extends Component {
   render() {
     return (
       <header>
-        <div className="logo">Logo</div>
+        <div className="logo">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Student Stay Over</span>
+        </div>
         <nav>
           <a href="#">create ads</a>
           <a href="#">About Us</a>

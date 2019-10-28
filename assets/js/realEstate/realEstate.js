@@ -17,6 +17,7 @@ class App extends Component {
       max_price: 1000000,
       min_floor_space: 0,
       max_floor_space: 50000,
+      campus: "All",
       elevator: "",
       basement: "",
       gym: "",
@@ -90,19 +91,43 @@ class App extends Component {
       });
     }
 
+    if (this.state.campus != "All") {
+      newData = newData.filter(item => {
+        return item.campus == this.state.campus;
+      });
+    }
+
     //for filtered extras of house
+
+    //elevator
+    if (this.state.elevator == true) {
+      newData = newData.filter(item => {
+        return item.extras.includes("elevator") == true;
+      });
+    }
+
+    //swimmingpool
+    if (this.state.swimming_pool == true) {
+      newData = newData.filter(item => {
+        return item.extras.includes("swimmingpool") == true;
+      });
+    }
+
+    //gym
     if (this.state.gym == true) {
       newData = newData.filter(item => {
         return item.extras.includes("gym") == true;
       });
     }
 
+    //price in decending order
     if (this.state.sortby == "price-dsc") {
       newData = newData.sort((a, b) => {
         return a.price - b.price;
       });
     }
 
+    //price in ascending order
     if (this.state.sortby == "price-asc") {
       newData = newData.sort((a, b) => {
         return b.price - a.price;
@@ -145,6 +170,14 @@ class App extends Component {
     homeTypes = [...homeTypes];
     homeTypes = homeTypes.sort();
 
+    //campus
+    var campus = this.state.listingsData.map(item => {
+      return item.campus;
+    });
+    campus = new Set(campus);
+    campus = [...campus];
+    campus = campus.sort();
+
     //bedrooms
     var bedrooms = this.state.listingsData.map(item => {
       return item.rooms;
@@ -159,7 +192,8 @@ class App extends Component {
         populateFormsData: {
           homeTypes,
           bedrooms,
-          cities
+          cities,
+          campus
         }
       },
       () => {

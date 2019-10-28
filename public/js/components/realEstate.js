@@ -44,6 +44,7 @@ var Header = function (_Component) {
     _this.cities = _this.cities.bind(_this);
     _this.homeTypes = _this.homeTypes.bind(_this);
     _this.bedrooms = _this.bedrooms.bind(_this);
+    _this.campus = _this.campus.bind(_this);
     return _this;
   }
 
@@ -101,6 +102,22 @@ var Header = function (_Component) {
       }
     }
   }, {
+    key: "campus",
+    value: function campus() {
+      if (this.props.globalState.populateFormsData.campus != undefined) {
+        var campus = this.props.globalState.populateFormsData.campus;
+
+
+        return campus.map(function (item) {
+          return _react2.default.createElement(
+            "option",
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -148,7 +165,7 @@ var Header = function (_Component) {
             _react2.default.createElement(
               "option",
               { value: "All" },
-              "All homes"
+              "All Homes"
             ),
             this.homeTypes()
           ),
@@ -165,6 +182,25 @@ var Header = function (_Component) {
               onChange: this.props.change
             },
             this.bedrooms()
+          ),
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "campus" },
+            "Campus"
+          ),
+          _react2.default.createElement(
+            "select",
+            {
+              name: "campus",
+              className: "filters campus",
+              onChange: this.props.change
+            },
+            _react2.default.createElement(
+              "option",
+              { value: "All" },
+              "All Campuses"
+            ),
+            this.campus()
           ),
           _react2.default.createElement(
             "div",
@@ -228,12 +264,12 @@ var Header = function (_Component) {
                 null,
                 "Elevators"
               ),
-              _react2.default.createElement("input", {
+              _react2.default.createElement("input", _defineProperty({
                 name: "elevator",
                 value: "elevator",
                 type: "checkbox",
                 onChange: this.props.change
-              })
+              }, "value", this.props.globalState.elevator))
             )
           ),
           _react2.default.createElement(
@@ -247,12 +283,12 @@ var Header = function (_Component) {
                 null,
                 "Swimming Pool"
               ),
-              _react2.default.createElement("input", {
+              _react2.default.createElement("input", _defineProperty({
                 name: "swimming_pool",
                 value: "swimmingpool",
                 type: "checkbox",
                 onChange: this.props.change
-              })
+              }, "value", this.props.globalState.swimmingpool))
             )
           ),
           _react2.default.createElement(
@@ -266,12 +302,12 @@ var Header = function (_Component) {
                 null,
                 "Finished Basement"
               ),
-              _react2.default.createElement("input", {
+              _react2.default.createElement("input", _defineProperty({
                 name: "basement",
                 value: "basement",
                 type: "checkbox",
                 onChange: this.props.change
-              })
+              }, "value", this.props.globalState.basement))
             )
           ),
           _react2.default.createElement(
@@ -304,7 +340,7 @@ var Header = function (_Component) {
 // // Features to Add:
 // // 1. College
 // // 2. Major
-// 3. Work Hard - Play
+// 3. Vibe: Book Worm-- Turn Up--Night Owl -- Social Butterfly -- Lowkey --Homebody -- Saint
 
 
 exports.default = Header;
@@ -362,7 +398,12 @@ var Header = function (_Component) {
         _react2.default.createElement(
           "div",
           { className: "logo" },
-          "Logo"
+          _react2.default.createElement("i", { "class": "fas fa-graduation-cap" }),
+          _react2.default.createElement(
+            "span",
+            null,
+            "Student Stay Over"
+          )
         ),
         _react2.default.createElement(
           "nav",
@@ -792,6 +833,7 @@ var listingsData = [{
   price: 400000,
   floorSpace: 2000,
   neighborhood: "bronzeville",
+  campus: "IIT",
   extras: ["elevator"],
   homeType: "condo",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -803,6 +845,7 @@ var listingsData = [{
   price: 400000,
   floorSpace: 2000,
   neighborhood: "bridgeport",
+  campus: "IIT",
   extras: ["elevator"],
   homeType: "condo",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -814,6 +857,7 @@ var listingsData = [{
   price: 200000,
   floorSpace: 1000000,
   neighborhood: "bronzeville",
+  campus: "IIT",
   extras: ["elevator"],
   homeType: "studio",
   image: "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
@@ -824,6 +868,7 @@ var listingsData = [{
   rooms: "1",
   price: 100000,
   neighborhood: "chinatown",
+  campus: "IIT",
   floorSpace: 50,
   extras: ["elevator"],
   homeType: "house",
@@ -833,6 +878,7 @@ var listingsData = [{
   city: "North Chicago",
   state: "Illinois",
   rooms: "3",
+  campus: "IIT",
   price: 400000,
   floorSpace: 2000,
   extras: ["elevator", "gym"],
@@ -843,6 +889,7 @@ var listingsData = [{
   city: "Aurora",
   state: "Illinois",
   rooms: "1",
+  campus: "Depaul",
   price: 400000,
   floorSpace: 4000,
   extras: ["gym"],
@@ -854,6 +901,7 @@ var listingsData = [{
   state: "Illinois",
   rooms: "6",
   price: 400000,
+  campus: "IIT",
   floorSpace: 6000,
   extras: ["elevator"],
   homeType: "apartment",
@@ -865,6 +913,7 @@ var listingsData = [{
   rooms: "5",
   price: 400000,
   floorSpace: 9000,
+  campus: "UChicago",
   extras: ["elevator"],
   homeType: "apartment",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
@@ -873,6 +922,7 @@ var listingsData = [{
   city: "Oak Lawn",
   state: "Illinois",
   rooms: "4",
+  campus: "UIC",
   price: 400000,
   floorSpace: 10000000,
   extras: ["elevator"],
@@ -883,6 +933,7 @@ var listingsData = [{
   city: "Chicago",
   state: "Illinois",
   rooms: "3",
+  campus: "IIT",
   price: 400000,
   floorSpace: 2000,
   extras: ["elevator"],
@@ -893,9 +944,10 @@ var listingsData = [{
   city: "Chicago",
   state: "Illinois",
   rooms: "3",
+  campus: "UIC",
   price: 400000,
   floorSpace: 2000,
-  extras: ["elevator"],
+  extras: ["elevator", "swimmingpool"],
   homeType: "house",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }];
@@ -965,6 +1017,7 @@ var App = function (_Component) {
       max_price: 1000000,
       min_floor_space: 0,
       max_floor_space: 50000,
+      campus: "All",
       elevator: "",
       basement: "",
       gym: "",
@@ -1036,19 +1089,43 @@ var App = function (_Component) {
         });
       }
 
+      if (this.state.campus != "All") {
+        newData = newData.filter(function (item) {
+          return item.campus == _this3.state.campus;
+        });
+      }
+
       //for filtered extras of house
+
+      //elevator
+      if (this.state.elevator == true) {
+        newData = newData.filter(function (item) {
+          return item.extras.includes("elevator") == true;
+        });
+      }
+
+      //swimmingpool
+      if (this.state.swimming_pool == true) {
+        newData = newData.filter(function (item) {
+          return item.extras.includes("swimmingpool") == true;
+        });
+      }
+
+      //gym
       if (this.state.gym == true) {
         newData = newData.filter(function (item) {
           return item.extras.includes("gym") == true;
         });
       }
 
+      //price in decending order
       if (this.state.sortby == "price-dsc") {
         newData = newData.sort(function (a, b) {
           return a.price - b.price;
         });
       }
 
+      //price in ascending order
       if (this.state.sortby == "price-asc") {
         newData = newData.sort(function (a, b) {
           return b.price - a.price;
@@ -1096,6 +1173,14 @@ var App = function (_Component) {
       homeTypes = [].concat(_toConsumableArray(homeTypes));
       homeTypes = homeTypes.sort();
 
+      //campus
+      var campus = this.state.listingsData.map(function (item) {
+        return item.campus;
+      });
+      campus = new Set(campus);
+      campus = [].concat(_toConsumableArray(campus));
+      campus = campus.sort();
+
       //bedrooms
       var bedrooms = this.state.listingsData.map(function (item) {
         return item.rooms;
@@ -1109,7 +1194,8 @@ var App = function (_Component) {
         populateFormsData: {
           homeTypes: homeTypes,
           bedrooms: bedrooms,
-          cities: cities
+          cities: cities,
+          campus: campus
         }
       }, function () {
         console.log(_this4.state);
