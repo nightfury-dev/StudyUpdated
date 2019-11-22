@@ -5,7 +5,7 @@ export default class Header extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Joe"
+      name: "Desmend"
     };
     this.loopListings = this.loopListings.bind(this);
   }
@@ -36,7 +36,7 @@ export default class Header extends Component {
 
                   <div className="col-md-9">
                     <div className="user-details">
-                      <span className="user-name">Nina Smith</span>
+                      <span className="user-name">{listing.postingAuthor}</span>
                       <span className="post-date">05/05/2019</span>
                     </div>
                     <div className="listing-details">

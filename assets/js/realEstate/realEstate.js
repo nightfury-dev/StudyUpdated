@@ -4,6 +4,7 @@ import Header from "./Header.js";
 import Filter from "./Filter.js";
 import Listings from "./Listings.js";
 import listingsData from "./data/listingsData";
+import NumberFormat from "react-number-format";
 
 class App extends Component {
   constructor() {

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import NumberFormat from "react-number-format";
 
 export default class Header extends Component {
   constructor() {

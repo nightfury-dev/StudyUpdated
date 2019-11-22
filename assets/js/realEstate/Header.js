@@ -16,9 +16,12 @@ export default class Header extends Component {
           <span>Student Stay Over</span>
         </div>
         <nav>
-          <a href="#">create ads</a>
-          <a href="#">About Us</a>
-          <a href="#">Login</a>
+          <a href="#" class="ads">
+            create ads
+          </a>
+          <a href="#" class="login-link">
+            Login
+          </a>
           <a href="#" className="register-btn">
             Register
           </a>

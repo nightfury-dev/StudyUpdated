@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 230:
+/***/ 231:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12,13 +12,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(46);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(60);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactNumberFormat = __webpack_require__(150);
+
+var _reactNumberFormat2 = _interopRequireDefault(_reactNumberFormat);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -347,7 +351,7 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 231:
+/***/ 232:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -359,7 +363,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(46);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -410,17 +414,12 @@ var Header = function (_Component) {
           null,
           _react2.default.createElement(
             "a",
-            { href: "#" },
+            { href: "#", "class": "ads" },
             "create ads"
           ),
           _react2.default.createElement(
             "a",
-            { href: "#" },
-            "About Us"
-          ),
-          _react2.default.createElement(
-            "a",
-            { href: "#" },
+            { href: "#", "class": "login-link" },
             "Login"
           ),
           _react2.default.createElement(
@@ -440,7 +439,7 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 232:
+/***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -452,7 +451,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(46);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -477,7 +476,7 @@ var Header = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).call(this));
 
     _this.state = {
-      name: "Joe"
+      name: "Desmend"
     };
     _this.loopListings = _this.loopListings.bind(_this);
     return _this;
@@ -534,7 +533,7 @@ var Header = function (_Component) {
                       _react2.default.createElement(
                         "span",
                         { className: "user-name" },
-                        "Nina Smith"
+                        listing.postingAuthor
                       ),
                       _react2.default.createElement(
                         "span",
@@ -816,7 +815,7 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 233:
+/***/ 234:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -825,18 +824,29 @@ exports.default = Header;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+// var price = require("react-currency-format");
+
+// <price
+//   value={listingsData.price}
+//   displayType={"text"}
+//   thousandSeparator={true}
+//   prefix={"$"}
+//   renderText={value => <div>{value}</div>}
+// />;
+
 var listingsData = [{
-  address: "20-34 Newart Court",
+  address: "3142 S Wells St",
   city: "Chicago",
   state: "Illinois",
-  rooms: "3",
-  price: 400000,
+  rooms: "7",
+  price: 349000,
   floorSpace: 2000,
-  neighborhood: "bronzeville",
+  neighborhood: "bridgeport",
   campus: "IIT",
   extras: ["elevator"],
+  postingAuthor: "Jane Fonda",
   homeType: "condo",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://photos.zillowstatic.com/cc_ft_768/IS7eihumdvf5hf1000000000.webp"
 }, {
   address: "2034 Newart Court",
   city: "Chicago",
@@ -847,20 +857,23 @@ var listingsData = [{
   neighborhood: "bridgeport",
   campus: "IIT",
   extras: ["elevator"],
+  postingAuthor: "John Fonda",
   homeType: "condo",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://photos.zillowstatic.com/p_h/ISiv3niqt3qbx10000000000.jpg"
 }, {
   address: "800 Dragon Court",
   city: "Drury",
   state: "Illinois",
   rooms: "0",
-  price: 200000,
+  price: 339000,
   floorSpace: 1000000,
   neighborhood: "bronzeville",
   campus: "IIT",
   extras: ["elevator"],
+  postingAuthor: "Nelson Mandela",
+
   homeType: "studio",
-  image: "https://images1.cityfeet.com/i2/9WS69RUUyySgfjbNlNCgpg0ejt_IKr4S0Je4sjk2KLg/110/423-e-ohio-st-chicago-apartments-for-lease.jpg"
+  image: "https://photos.zillowstatic.com/cc_ft_768/IS7avsc9i018oh0000000000.webp"
 }, {
   address: "11 Juper Court",
   city: "Evanston",
@@ -871,6 +884,8 @@ var listingsData = [{
   campus: "IIT",
   floorSpace: 50,
   extras: ["elevator"],
+  postingAuthor: "Johnny Tsunami",
+
   homeType: "house",
   image: "https://ap.rdcpix.com/390685504/28b138fea3ec51c8fe7a0924b425fd91l-m0xd-w640_h480_q80.jpg"
 }, {
@@ -882,10 +897,12 @@ var listingsData = [{
   price: 400000,
   floorSpace: 2000,
   extras: ["elevator", "gym"],
+  postingAuthor: "Bel Aire",
+
   homeType: "studio",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
 }, {
-  address: "333 Pancake Lane",
+  address: "50 E 26th St APT 208",
   city: "Aurora",
   state: "Illinois",
   rooms: "1",
@@ -893,43 +910,51 @@ var listingsData = [{
   price: 400000,
   floorSpace: 4000,
   extras: ["gym"],
+  postingAuthor: "Captain Planet",
+
   homeType: "apartment",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://photos.zillowstatic.com/cc_ft_768/ISr55x9rz93mjk0000000000.webp"
 }, {
-  address: "1029 OakLawn",
+  address: "4800 S Lake Park Ave APT 20",
   city: "Nortbrook",
   state: "Illinois",
-  rooms: "6",
-  price: 400000,
+  rooms: "2",
+  price: 45000,
   campus: "IIT",
   floorSpace: 6000,
   extras: ["elevator"],
+  postingAuthor: "James Bond",
+
   homeType: "apartment",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://photos.zillowstatic.com/cc_ft_768/ISzvm2xvslxjxk0000000000.webp"
 }, {
-  address: "20-34 Newart Court",
+  address: "3817 S Ellis Ave UNIT 202",
   city: "Chicago",
   state: "Illinois",
-  rooms: "5",
-  price: 400000,
-  floorSpace: 9000,
+  rooms: "3",
+  price: 219000,
+  floorSpace: 1500,
   campus: "UChicago",
   extras: ["elevator"],
+  postingAuthor: "VonTae Hall",
+
   homeType: "apartment",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://photos.zillowstatic.com/cc_ft_576/IS7idwxwfp0ezu0000000000.webp"
 }, {
-  address: "16 Grover Street",
+  address: "3650 S Marshfield Ave",
   city: "Oak Lawn",
   state: "Illinois",
-  rooms: "4",
+  rooms: "6",
   campus: "UIC",
   price: 400000,
   floorSpace: 10000000,
   extras: ["elevator"],
+  postingAuthor: "Al Sharpton",
+
   homeType: "apartment",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://photos.zillowstatic.com/cc_ft_768/ISrpo1mteo9vq01000000000.webp"
 }, {
-  address: "20-34 Newart Court",
+  address: "3415 S Wallace St",
   city: "Chicago",
   state: "Illinois",
   rooms: "3",
@@ -937,10 +962,12 @@ var listingsData = [{
   price: 400000,
   floorSpace: 2000,
   extras: ["elevator"],
+  postingAuthor: "Almost Famous",
+
   homeType: "apartment",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
 }, {
-  address: "20-34 Newart Court",
+  address: "3146 S Shields Ave",
   city: "Chicago",
   state: "Illinois",
   rooms: "3",
@@ -950,13 +977,252 @@ var listingsData = [{
   extras: ["elevator", "swimmingpool"],
   homeType: "house",
   image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+}, {
+  address: "111 Tupac Ave",
+  city: "Chicago",
+  state: "Illinois",
+  rooms: "3",
+  campus: "IIT",
+  price: 100000,
+  floorSpace: 2000,
+  extras: ["elevator"],
+  homeType: "apartment",
+  image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // },
+  // {
+  //   address: "3415 S Wallace St",
+  //   city: "Chicago",
+  //   state: "Illinois",
+  //   rooms: "3",
+  //   campus: "IIT",
+  //   price: 400000,
+  //   floorSpace: 2000,
+  //   extras: ["elevator"],
+  //   homeType: "apartment",
+  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
+  // }
 }];
 
 exports.default = listingsData;
 
 /***/ }),
 
-/***/ 237:
+/***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -964,7 +1230,7 @@ exports.default = listingsData;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(59);
+var _react = __webpack_require__(46);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -972,21 +1238,25 @@ var _reactDom = __webpack_require__(60);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Header = __webpack_require__(231);
+var _Header = __webpack_require__(232);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _Filter = __webpack_require__(230);
+var _Filter = __webpack_require__(231);
 
 var _Filter2 = _interopRequireDefault(_Filter);
 
-var _Listings = __webpack_require__(232);
+var _Listings = __webpack_require__(233);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
-var _listingsData = __webpack_require__(233);
+var _listingsData = __webpack_require__(234);
 
 var _listingsData2 = _interopRequireDefault(_listingsData);
+
+var _reactNumberFormat = __webpack_require__(150);
+
+var _reactNumberFormat2 = _interopRequireDefault(_reactNumberFormat);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1236,4 +1506,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), app);
 
 /***/ })
 
-},[237]);
+},[238]);
