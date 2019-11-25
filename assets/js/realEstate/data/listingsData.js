@@ -44,7 +44,7 @@ var listingsData = [
     state: "Illinois",
     rooms: "0",
     price: 339000,
-    floorSpace: 1000000,
+    floorSpace: 10000,
     neighborhood: "bronzeville",
     campus: "IIT",
     extras: ["elevator"],
@@ -136,7 +136,7 @@ var listingsData = [
     rooms: "6",
     campus: "UIC",
     price: 400000,
-    floorSpace: 10000000,
+    floorSpace: 10000,
     extras: ["elevator"],
     postingAuthor: "Al Sharpton",
 
