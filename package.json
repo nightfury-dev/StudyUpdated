@@ -1,11 +1,14 @@
 {
   "name": "Student-Stay-Over",
   "version": "1.0.0",
-  "description": "Super Cool Framework",
+  "description": "A real estate application for college students",
   "main": "index.js",
-  "author": "joe santos garcia",
+  "author": "Desmend Jetton",
   "license": "MIT",
-  "homepage": "http://rocky.codingphase.com/",
+  "homepage": "",
+  "engines": {
+    "node": "10.15.3"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "babel-core": "^6.24.1",
@@ -29,6 +32,7 @@
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.9",
     "html-webpack-plugin": "^2.28.0",
+    "natives": "1.1.6",
     "node-sass": "^4.5.2",
     "react": "^15.5.4",
     "react-currency": "^2.0.0",
