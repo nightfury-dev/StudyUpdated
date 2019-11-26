@@ -1,3 +1,7 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+
 * linguist-vendored
 * linguist-language=Javascript
 *.js linguist-language=Javascript
