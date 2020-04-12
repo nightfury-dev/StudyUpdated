@@ -217,12 +217,14 @@
           border-radius: 50%;
           border: 2px solid white;
           display: inline-block;
-          background: url("https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
+
+          // background: url("https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80");
           -webkit-background-size: cover;
           -moz-background-size: cover;
           -o-background-size: cover;
           background-size: cover;
         }
+
         .user-details {
           vertical-align: top;
           display: inline-block;

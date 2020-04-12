@@ -620,7 +620,12 @@ var Header = function (_Component) {
                   _react2.default.createElement(
                     "div",
                     { className: "col-md-3" },
-                    _react2.default.createElement("div", { className: "user-image" })
+                    _react2.default.createElement("div", {
+                      className: "user-image",
+                      style: {
+                        background: "url(\"" + listing.userImg + "\") no-repeat center center"
+                      }
+                    })
                   ),
                   _react2.default.createElement(
                     "div",
@@ -846,7 +851,8 @@ var listingsData = [{
   extras: ["elevator"],
   postingAuthor: "Jane Fonda",
   homeType: "condo",
-  image: "https://photos.zillowstatic.com/cc_ft_768/IS7eihumdvf5hf1000000000.webp"
+  userImg: "https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfgrhF1q0x37xHKFWLiMpZZMt3-yCJXCiDrMBSoQLdhAKTAgecUA&s"
 }, {
   address: "2034 Newart Court",
   city: "Chicago",
@@ -859,7 +865,7 @@ var listingsData = [{
   extras: ["elevator"],
   postingAuthor: "John Fonda",
   homeType: "condo",
-  image: "https://photos.zillowstatic.com/p_h/ISiv3niqt3qbx10000000000.jpg"
+  image: "https://www.apartments.com/images/librariesprovider2/default-album/north-water-apartments.jpg?sfvrsn=218d42fc_0"
 }, {
   address: "800 Dragon Court",
   city: "Drury",
@@ -871,9 +877,8 @@ var listingsData = [{
   campus: "IIT",
   extras: ["elevator"],
   postingAuthor: "Nelson Mandela",
-
   homeType: "studio",
-  image: "https://photos.zillowstatic.com/cc_ft_768/IS7avsc9i018oh0000000000.webp"
+  image: "https://www.domu.com/sites/default/files/styles/blog_large/public/filefield/field_post_image/Lincoln-Common-Sky-lounge-feature-image_Blog-Image.jpg"
 }, {
   address: "11 Juper Court",
   city: "Evanston",
@@ -885,7 +890,6 @@ var listingsData = [{
   floorSpace: 50,
   extras: ["elevator"],
   postingAuthor: "Johnny Tsunami",
-
   homeType: "house",
   image: "https://ap.rdcpix.com/390685504/28b138fea3ec51c8fe7a0924b425fd91l-m0xd-w640_h480_q80.jpg"
 }, {
@@ -926,7 +930,7 @@ var listingsData = [{
   postingAuthor: "James Bond",
 
   homeType: "apartment",
-  image: "https://photos.zillowstatic.com/cc_ft_768/ISzvm2xvslxjxk0000000000.webp"
+  image: "https://2jrsul422l1h30k2za1f5dcc-wpengine.netdna-ssl.com/wp-content/uploads/2017/06/untitled-58.jpg"
 }, {
   address: "3817 S Ellis Ave UNIT 202",
   city: "Chicago",
@@ -939,7 +943,7 @@ var listingsData = [{
   postingAuthor: "VonTae Hall",
 
   homeType: "apartment",
-  image: "https://photos.zillowstatic.com/cc_ft_576/IS7idwxwfp0ezu0000000000.webp"
+  image: "https://www.rentnemachicago.com/assets/uploads/transforms/images/chicago/residences/737/SIGNATURE-RESIDENCE-A_9bac04bcfeef2626e8a17b2d76793985.jpg"
 }, {
   address: "3650 S Marshfield Ave",
   city: "Oak Lawn",
@@ -976,7 +980,7 @@ var listingsData = [{
   floorSpace: 2000,
   extras: ["elevator", "swimmingpool"],
   homeType: "house",
-  image: "http://s3.amazonaws.com/ygl-photos/730W58fab5ee5ac20.jpg"
+  image: "https://vestapreferred.com/images/blog/post/600x401x165,P20N,P20Des,P20Plaines,P20lobby,P201-1526422490.jpg.pagespeed.ic.doVoGquEKe.jpg"
 }, {
   address: "111 Tupac Ave",
   city: "Chicago",
@@ -988,234 +992,6 @@ var listingsData = [{
   extras: ["elevator"],
   homeType: "apartment",
   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // },
-  // {
-  //   address: "3415 S Wallace St",
-  //   city: "Chicago",
-  //   state: "Illinois",
-  //   rooms: "3",
-  //   campus: "IIT",
-  //   price: 400000,
-  //   floorSpace: 2000,
-  //   extras: ["elevator"],
-  //   homeType: "apartment",
-  //   image: "https://photos.zillowstatic.com/p_e/ISivfkc9awn00a1000000000.jpg"
-  // }
 }];
 
 exports.default = listingsData;

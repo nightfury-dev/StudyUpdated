@@ -1,6 +1,6 @@
 # Student Stay Over
 
-Having a hard finding off campus housing to succeed in school? Use student stay over to find local university students that are looking for roommates. Filter by campus, accomodations, and price.
+Having a hard finding off campus housing to succeed in school? Use student stay over to find local university students that are looking for roommates. Users can filter by campus, accomodations, and price.
 
 ## Getting Started
 
@@ -43,6 +43,7 @@ You will need a package manager, either using NPM or Yarn. This project used NPM
 - SASS - CSS Preprocessor
 - Images from Pexels and Upslash
 - Babel
+- Gulp
 
 ## Authors
 

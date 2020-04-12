@@ -5,7 +5,7 @@ export default class Header extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Desmend"
+      name: "Desmend",
     };
     this.loopListings = this.loopListings.bind(this);
   }
@@ -25,7 +25,7 @@ export default class Header extends Component {
               <div
                 className="listing-image"
                 style={{
-                  background: `url("${listing.image}") no-repeat center center`
+                  background: `url("${listing.image}") no-repeat center center`,
                 }}
               >
                 <span className="address">{listing.address}</span>
@@ -72,13 +72,18 @@ export default class Header extends Component {
               <div
                 className="listing-image"
                 style={{
-                  background: `url("${listing.image}") no-repeat center center`
+                  background: `url("${listing.image}") no-repeat center center`,
                 }}
               >
                 <span className="address">{listing.address}</span>
                 <div className="details">
                   <div className="col-md-3">
-                    <div className="user-image"></div>
+                    <div
+                      className="user-image"
+                      style={{
+                        background: `url("${listing.userImg}") no-repeat center center`,
+                      }}
+                    ></div>
                   </div>
 
                   <div className="col-md-9">
