@@ -1,6 +1,6 @@
-# Student Stay Over
+# StudyUpdated
 
-Having a hard finding off campus housing to succeed in school? Use student stay over to find local university students that are looking for roommates. Users can filter by campus, accomodations, and price.
+Having a hard finding off campus housing to succeed in school? Use StudyUpdated to find local university students that are looking for roommates. Users can filter by campus, accomodations, and price.
 
 ## Getting Started
 

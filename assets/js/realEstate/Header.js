@@ -13,7 +13,7 @@ export default class Header extends Component {
       <header>
         <div className="logo">
           <i class="fas fa-graduation-cap"></i>
-          <span>Student Stay Over</span>
+          <span>Study Updated</span>
         </div>
         <nav>
           <a href="#" class="ads">

@@ -406,7 +406,7 @@ var Header = function (_Component) {
           _react2.default.createElement(
             "span",
             null,
-            "Student Stay Over"
+            "StudyUpdated"
           )
         ),
         _react2.default.createElement(
